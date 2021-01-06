@@ -9,7 +9,9 @@ lakehead
 unilag
 babcock
  */
+
 import java.util.*;
+
 public class Practice {
     public static void main(String[] args) {
 
@@ -31,9 +33,6 @@ public class Practice {
             }
            System.out.println(schools);
         }
-
-
-
 
 }//end of main
 }//end of class
