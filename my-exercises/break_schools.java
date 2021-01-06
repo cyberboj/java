@@ -8,7 +8,6 @@ brock
 lakehead
 unilag
 babcock
-
  */
 import java.util.*;
 public class Practice {
