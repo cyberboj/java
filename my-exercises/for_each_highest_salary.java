@@ -11,9 +11,6 @@ it support = 45k
 import java.util.ArrayList;
 public class Practice {
 
-
-
-
     public static void main(String[] args) {
         ArrayList<Integer> itSalaries = new ArrayList<Integer>();
         itSalaries.add(149000);
