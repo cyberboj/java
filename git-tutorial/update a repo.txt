@@ -1,0 +1,21 @@
+to open a folder:
+	
+	cd folderName/
+	
+to list files in a folder:
+
+	ls -a 
+	
+to add items to a folder (after manually dragging it in):
+
+	 git add itemName
+e.g. git add summary.txt
+	
+to save changes and leave a message:
+
+	 git commit -m "describe what you did:
+e.g. git commit -m "added the summary file"
+
+to save this to the repo
+
+	git push -u
