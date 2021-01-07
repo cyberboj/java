@@ -1,0 +1,60 @@
+Math class 
+
+	non static example //creating objects and all that long work
+	
+class Numbers {
+  int firstNumber;
+  int secondNumber;
+ 
+  public Numbers (int num1, int num2) {
+    firstNumber = num1;
+    secondNumber = num2;
+  }
+ 
+  // non-static method
+  public int returnSum() {
+    return firstNumber + secondNumber;
+  }
+ 
+  public static void main(String[] args) {
+    // Create an object
+    Numbers myNumbers = new Numbers(2, 5);
+    // Call a non-static method on object
+    int sum = myNumbers.returnSum();
+    System.out.println(sum); // Prints: 7
+  }
+}
+
+	static example
+
+
+import java.util.*;
+
+public class Practice {
+    public static void main(String[] args){
+        
+        int num = Math.addExact(12,8);
+        System.out.println(num);
+        
+    }//end of method
+}//end of class
+
+
+	in summary, thank God for Math Class. Another way of doing this is using the math package, import static java.lang.Math.*; .e.g.
+import static java.lang.Math.*;
+
+public class Practice {
+    public static void main(String[] args){
+
+        int num = min(12,8); //prints minimum out of the two. Notice how we didn't use any dots
+        System.out.println(num);
+
+    }//end of method
+}//end of class
+
+
+VERY IMPORTANT ALGORITHM
+
+	if we wanted an int value in the range of 10 up to and including 20? We would have to implement the algorithm 
+	
+	(Math.random() * (maxValue - minValue + 1)) + minValue.

@@ -1,0 +1,52 @@
+First of all, what's Git?
+	Git is an open source version control software. This means that it manages changes to a project without overwriting any part of that project thanks to Linus Torvalds, creator of Linux <3. 
+	GitHub is a code hosting platform for version control and collaboration.
+
+Why do I need it?
+	Let's say two people are working on the same project or are uodating pages on the same website. Git allows both people to upload individual revisions of the same page and Git saves these two copies. This way, no one's work is overwritten and lost. 
+	What's also cool about GitHub is that you can download copies for yourself to alter and learn from and others can do the same to your public projects as well and even spot errors and suggest fixes.
+
+
+Git basics:
+
+- Terminal: where you tyoe in text-based commands known as prompts into the screen
+
+- Repository: (the most annoying word i keep hearing programmers use) is a 'directory' or storage space for your projects. some guys call it 'repo'. it can either be local folders on your computer or can be a storage space on GitHub or any online host. You can keep code files, text files, image files and whatever you want right here inside a repository.
+	it's always recommended to include a READ ME file in your project that gives info on what it is about.
+
+- Version Control: 
+
+- Commit: the command that gives Git its power. When you commit, you're taking a snapshot of your repo at that point in time. Kinda like a checkpoint for you to be able to reevaluate or restore your project to any previous state.
+	saved changes in GitHub are called "commits". Each commit has an associated commit message, which is a description explaining why a particular change was made. Commit messages capture the history of your changes, so other contributors can understand what you’ve done and why.
+
+- Branch: When people "branch" off a main project, they are working on the project at the same time each with their own versions full of the changes they made. When they're done, they "merge" that branch back with the "master", the main directory of the project.
+	We use branches to experiment and make edits before committing them to 'main'
+	
+- Pull requests: Pull Requests are the heart of collaboration on GitHub. When you open a pull request, you’re proposing your changes and requesting that someone review and pull in your contribution and merge them into their branch. Pull requests show diffs, or differences, of the content from both branches. The changes, additions, and subtractions are shown in green and red. As soon as you make a commit, you can open a pull request and start a discussion, even before the code is finished.
+
+A couple of Git commands:
+
+* git init: to initialize a new Git repository. it's gonna remain a regular folder until you run this command inside a repo.
+
+* git config: config is short for configure. this is most useful when setting up Git for the first time.
+
+* git help: when you forget a command, type this in and it'd bring up 21 most used git commands. You can also be specific and use "git help init" or another term to figure out how to use and configure a specific git command.
+
+* git status: to check the status of your repo. With this, you can see which files are inside it, which changes need to be committed and which branch of the repo you're currently working on.
+
+* git add: though this doesn't add new files to your repo, it brings new files to Git's attention. After you add the files, they're then included in Git's "snapshots" of the repo.
+
+* git commit: the most important Git command everr. After making any changes, you input this command to take a snapshot of the repo. Looks like this
+	git commit -m "Message here."
+the '-m' shows that the following section of the command should be read as a message.
+
+* git branch: for when working with multiple coworkers and you need to make changes of your own. This command allows you to build a new branch (or timeline of commits) of changes and file additions of your own. Your title goes right after the command e.g. if you were to create a new branch called "nintendo", you'd type
+	git branch nintendo
+	
+* git checkout: allows you to check out a repo you are not currently in. It's a navigational command that allows you to move to the repo you want to check. You could either use this command as 'git checkout master' to look at the master branch or 'git checkout nintendo' to look at another branch.
+
+* git merge: when you're done working with a branch, you ccan merge your changes back to the master branch so other coworkers can see. 'git merge nintendo' takes all the changes you made to the "nintendo" branch and then adds them to the master.
+
+* git push: if you're working on your local computer and want your commits to be visible online on GitHub as well, you "push" the changes up to GitHub with this command.
+
+*git pull: if you're working on you local computer and want the most up-to-date version of your repo to work with, you "pull" the changes down from GitHub with this command.

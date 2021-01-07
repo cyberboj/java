@@ -1,0 +1,67 @@
+Other private methods
+
+Oftentimes, private methods are helper methods — that is to say that they’re methods that other, bigger methods use.
+
+For example, for our CheckingAccount example, we might want a public method like getAccountInformation() that prints information like the name of the account owner, the amount of money in the account, and the amount of interest the account will make in a month. That way, another class, like a Bank, could call that public method to get all of that information quickly.
+
+
+do mutator methods return the value of an instance variable
+
+
+Calling Static Methods
+
+	The Math Class
+	
+	evvery method in the math class is static so we can call and use these methods without creating an object of the class (cuz that's what static means). 
+	To call a static method, we add the dot operator to the class name followed by the method we want to execute so
+	className.methodToExecute();
+	
+and if it's to reference a method of Math class:
+	Math.nameOfMethod();
+	
+USEFUL METHODS:
+- int abs(int x) //to find absolute value
+	System.out.println(Math.abs(-5)); // Prints: 5
+- double abs(double x)  //to find absolute value of double type
+	System.out.println(Math.abs(-5.0)); // Prints: 5.0
+- double pow(double base, double exponent) //to find the power of the first parameter. x^y
+	double x = Math.pow(5, 3);
+	System.out.println(x); // Prints: 125.0
+- double sqrt(double x) //for square root of a double value
+	double y = Math.sqrt(52); 
+	System.out.println(y); // Prints: 7.211102550927978
+- double random()// returns double value greater than or equal to 0.0 and less than 1.0
+		System.out.println(Math.random()); //the random value changes each time you run the program
+		
+	With some manipulation, we can use Math.random() to create a random int or double value within a predefined range.
+	
+	For example, if we wanted a random double value between 0 and 9, we would multiply Math.random() by 10
+	
+		// Random double value between 0 and 9
+		double a = Math.random() * 10;
+	
+	If we wanted a random int value between 0 and 9, we would need to implement the (int) casting operator in our expression          
+	like so:
+	
+		// Random int value between 0 and 9
+		int b = (int)(Math.random() * 10);
+
+	If we wanted our range to start at 1 and end at 10, we would have to add 1 to the end of our previous expression:
+	
+		// Random int value between 1 and 10
+		int c = (int)(Math.random() * 10) + 1;
+		
+	Note how the + 1 is added outside the parentheses. This is an important syntax to remember. If we placed the + 1 inside the 
+	parentheses, we would get a random int between 0 and 10
+	
+	if we wanted an int value in the range of 10 up to and including 20? We would have to implement the algorithm (Math.random() * (maxValue - minValue + 1)) + minValue.
+
+	For example:
+			
+			// Random int value between 10 and 20
+			int d = (int)(Math.random() * 11 ) + 10;
+	
+	We multiple Math*random() by 11 because 20 (our max value) minus 10 (our minimum value) plus 1 is 11. 
+	We add + 10 outside the parentheses so that our smallest value is guaranteed to be 10.
+
+
