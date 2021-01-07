@@ -1,0 +1,70 @@
+mkdir nameofrepo
+cd nameofrepo/
+git init
+
+you get an initialized statement
+
+because these files are hidden, to see them:
+
+ls -a
+
+then you should get something like:
+.   ..   .git
+
+meaning empty file
+
+to see the git manual:
+man git 
+
+
+
+To add files to a repo
+
+
+
+Last login: Mon Jan  4 02:10:54 on ttys001
+cyberprincess@cybers-MacBook-Pro ~ % cd noodles/
+cd: no such file or directory: noodles/
+cyberprincess@cybers-MacBook-Pro ~ % mkdir noodles
+cyberprincess@cybers-MacBook-Pro ~ % cd noodles/
+cyberprincess@cybers-MacBook-Pro noodles % git init
+Initialized empty Git repository in /Users/cyberprincess/noodles/.git/
+cyberprincess@cybers-MacBook-Pro noodles % git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+cyberprincess@cybers-MacBook-Pro noodles % git add gitty.txt
+cyberprincess@cybers-MacBook-Pro noodles % git commit -m "omo wetin dey sup?"
+[master (root-commit) 4f11521] omo wetin dey sup?
+ Committer: cyber princess <cyberprincess@cybers-MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 3 insertions(+)
+ create mode 100644 gitty.txt
+cyberprincess@cybers-MacBook-Pro noodles % git config --global user.name cyberboj
+cyberprincess@cybers-MacBook-Pro noodles % git config --global user.email estherlovestechnology@gmail.com
+cyberprincess@cybers-MacBook-Pro noodles % git commit --amend --reset-author
+hint: Waiting for your editor to close the file... error: There was a problem with the editor 'vi'.
+Please supply the message using either -m or -F option.
+cyberprincess@cybers-MacBook-Pro noodles % -m
+zsh: command not found: -m
+cyberprincess@cybers-MacBook-Pro noodles % git commit -m "bro"
+On branch master
+nothing to commit, working tree clean
+cyberprincess@cybers-MacBook-Pro noodles % ls -a
+.		..		.git		gitty.txt
+cyberprincess@cybers-MacBook-Pro noodles % git commit -m "guy now how far"
+On branch master
+nothing to commit, working tree clean
+cyberprincess@cybers-MacBook-Pro noodles % 

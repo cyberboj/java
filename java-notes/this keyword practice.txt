@@ -15,8 +15,8 @@ public class Practice {
 
     public static void main(String[] args){
 
-        Practice hero = new Practice("cyberboj");
-        hero.sayName("the Joker");
+        Practice hero = new Practice("Clark Kent");
+        hero.sayName("Superman");
 
     }//end of main
 }//end of class

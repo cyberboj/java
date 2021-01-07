@@ -1,0 +1,323 @@
+/** variables are the items that we change so we can reuse them throughout the program e.g int name = maya. name is the variable. Hardcoding is using a value without assigning it to a variable e.g. 690;
+
+Data is the pieces of information that we use to build programs. They tell us what type of operations we can perform and how it can be stored. Primitive data types are the most basic data types that you find in every programming language such as numbers, strings and boolean values.
+
+	 We use numbers to describe, calculate and count
+	 Strings are any sequence of characters such as letters, spaces, numbers or symbols
+	 Boolean only has two values; true or false. Invented by George Boole. We use boolean to determine validity and to make decisions. This is evident in the relationship between electricity and logic cuz thats the basis of digitization
+	 
+Operators are the symbols we use in representing an operation e.g. + for addition and so on. We use operators to calculate stuff using arithmetic operators, compare information using comparison operators (<,>,==) and create logical expressions using boolean/logical operators 
+
+
+A function is a named sequence of instructions, packaged as a unit that performs a specific task. A function is defined when it's name, inputs and instructions have been specified
+
+functionName (parameters) {
+arguments //the actual values inputted
+}
+
+Control flow is the order in which a set of instructions are executed in a program.
+	Programmers use control structures to alter control flow. These control structures include conditional statements
+	
+Computers can run instructions on their own but they can't run decisions on their own and that's why we as programmers have to give them a set of instructions and describe the right conditions to use in each set
+
+A loop is a sequence of instructions which is specified once but may be carried out several times in a row. 
+
+In exception handling, two sets of instructions are defined. The first set is executed and if an exception occurs then the first set is stopped and the second set of instructions is executed.
+
+Data structures are formats that we can use to keep track of our data in an organized manner. One of the most basic data structures is Lists which are used to store multiple pieces of information that relate to each other in some way.
+	position of a value in a list is known as Index. They're like addresses where items in a list are located. Lists start with index 0 i.e. a list of 3 items will have index 0, index 1 and index 2.
+	
+	
+To add something to a list, we use the .add() method or .append()
+
+To add things to a list or change the contents of an array, we use the .set() method.
+
+To remove things, we use .remove() in Java
+
+For loops(or count controlled loops) are for when you know how long you want the instructions to run
+
+  for (i = 0; i < 10; i++) {
+  placeTile('mint')
+  placeTile('orange')
+  placeTile('mint')
+  }
+
+While loops (or condition controlled loops) repeat a set of instructions while that condition is true.
+
+	let i = 0;
+  while (i < 10) {
+  placeTile('mint')
+  placeTile('orange')
+  placeTile('mint')
+  i++
+  } 
+
+For each loops (or collection loops) are for performing a task in a specific order
+
+
+Iterations is the execution of each loop
+
+Compound assignment operators perform an arithmetic operation on a variable and then reassign its value. e.g. 
+
+	int numCakes = 6;
+	cakes += 4; //value is now 10 because 6 + 4
+	
+Order of operations (bodmas of java) :
+- parentheses ()
+- multiplication *
+- division /
+- modulo %
+- addition +
+- subtraction -
+
+sout(.equals()); is to check if one string equals the other e.g.
+
+sout(line1.equals(line2)); would print false if they're not the same
+
+CLASSES
+an object contains the state and behaviour so an object oriented program is built around objects and their interactions. 
+
+a class is the set of instructions that describe how an instance can behave and what information it contains. Java has predefined classes such as System in System.out.println
+
+	A class is like a blueprint that tell the programming language what the data type looks like and what it is made up of. Here, we're just describing the data type not creating it. to create it, we'd need an Object which is an instance of the class. 
+	
+	Object is the actual thing we're gonna work around with in our programs. Object is the implementation of the class. 
+	
+public is an access level modifier that allowa other classes to interact with this class
+
+The Constructor method (that is within the class) allows us to create an object (an instance of a class)
+ e.g.
+ 
+ public class Car {
+	 public Car(){
+	 
+	 instructions for creating a car instance
+	 
+	   }//end of constructor 
+	   
+ public static void main(String[] args) {
+ 
+	 here we invoke the constructor e.g.
+	 
+	 Car ferrari = new Car(); //with ferrari being the reference data type
+	 
+	 WHENEVER YOU USE THE WORD new, WE ARE CREATING AN INSTANCE
+ 
+ }//end of main method
+ }//end of class
+ 
+ 
+ also we can initialize a reference-type variable without assingning it to a reference by using special value 'null'. i.e. if we assign null to an object, it would have a void reference.
+ 
+ so like
+ 
+ public class House {
+	 public House(){
+	 
+	 }//end of constructor
+ public static void main(String[] args) {
+	 House garage = new House();
+	 
+	 garage = null; //giving garage a void reference 
+	 System.out.println(garage); //result wuld be null == empty
+	
+ }//end of main method
+ }//end of class
+ 
+ 
+ when an object is created, the constructor sets the initial state of the object. We add data to an obbjectt by introducing instance variables or instance fields. You create objects from a class
+ 
+ public class Car {
+
+  //declare fields inside the class by specifying the type and name
+  
+  
+  
+  String color; //this is the state also known as the Instance Field
+ 
+  public Car() {
+
+// instance fields available in scope of constructor method
+
+  }
+ 
+  public static void main(String[] args) {
+    // body of main method
+  }
+} 
+
+as you can see, declaration is within the class and the instance variable will be available for assignment inside the constructor. Fields are a type of state each instance will possess.
+
+
+We use both constructor and instance fields to create objects with dynamic individual states. In order to assign a value to an instance variable, we need to alter our constructor method to include parameters so that it can access the data we want to assign to an instance. e.g. 
+
+public class Car {
+  String color;
+  // constructor method with a parameter
+  public Car(String carColor) {
+    // parameter value assigned to the field
+    color = carColor;
+  }
+  public static void main(String[] args) {
+    // program tasks
+  }
+}
+
+
+When a String value gets passed into Car(), it is assigned to the parameter carColor. Then, inside the constructor, carColor will be assigned as the value to the instance variable color.
+
+Our method also has a signature which defines the name and parameters of the method. In the above example, the signature is Car(String carColor).
+
+values passed into the method call are called Arguements. 
+
+
+void means there is no specific output
+
+very important to notw what Method signatures are.
+
+static methods are methods that can be called without creating an object of a class e.g. the main method
+
+To call a method, we first reference our object, then use the dot . operator to call the method e.g.
+
+object.methodName();
+
+A method is a task that a object of a class performs. We can't access variables that are declared inside a method in code that is outside the scope of that method.
+
+adding parameters to method
+let's say method signature is :
+
+public void eat(int numOfPlates, String food) {}
+
+in the main you'd call this method like so
+
+public static void main(String[] args) {
+ Class object = new Class();
+ object.eat(5, "eba");
+ 
+}
+
+you get?
+
+
+method overloading can allow for creation of the method with same name but as long as it has different parameters in the method signature
+
+
+we change instance fields to change the state of an object and make our objects more flexible and realistic
+
+
+just so you know, instance variable is:
+
+String animal;
+
+instace FIELD is:
+String animal;
+int numOfAnimals;
+String location;
+int numOfZoos;
+
+that's why it's called a field
+
+example of reassigning instance fields:
+
+public class Store {
+  // instance fields
+  String productType;
+  double price;
+  
+  // constructor method
+  public Store(String product, double initialPrice) {
+    productType = product;
+    price = initialPrice;
+  }
+  
+  // increase price method
+  public void increasePrice(double priceToAdd){
+    double newPrice = price + priceToAdd;
+    price = newPrice;
+
+  }
+  
+  Any code that exists outside a return statement in a function is ignored.
+  
+  
+  normally, when we don't want a value to be returned, we do somn like:
+  
+  public void lalala(){}
+  
+  but since we want to return a primitive value from a method when using keyword 'return'; our method would look somn like:
+  
+  public data type methodName (){
+  
+  datatype whatever = blah ;
+  
+  return whatever;
+  
+  }
+  
+  However, to return an object (which is quite different), we return a reference to the object instead of copying it
+  
+  
+  the .toString() method turns object to string e.g.
+  
+  class Car {
+ 
+    String color;
+ 
+    public Car(String carColor) {
+        color = carColor;
+    }
+ 
+    public static void main(String[] args){
+        Car myCar = new Car("red");
+        System.out.println(myCar);
+    }
+ 
+   public String toString(){
+       return "This is a " + color + " car!";
+   }
+}
+
+
+if-then is the simplest control flow ever
+if (){
+then do all this
+}
+
+
+if-then-else
+
+if (){
+
+......
+
+} else {
+
+....
+
+}
+
+
+if-then-else-if
+
+if(){
+...
+} else if(){
+....
+} else {
+....
+}
+
+
+Nested conditional statements:
+if (outer condition) {
+  if (nested condition) {
+    Instruction to execute if both conditions are true
+  }
+}
+
+
+you could aways use switch-case if you dont wanna use if-then-else
+**/
+
+
+

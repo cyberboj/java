@@ -1,0 +1,74 @@
+the THIS keyword
+
+it's used as a reference to the current object for when we want to access instance variable and not the local variable. it's used to eliminate confusion between class attributes and parameters with the same name. 
+
+public class Person{
+  public int age;
+  public int wisdom;
+  public int fitness;
+
+  public Person(int inputAge){
+    this.age = inputAge; // this.declaredVariable = parameter passed in method
+
+
+    this.wisdom = inputAge * 5;
+    this.fitness = 100 - inputAge;
+  }
+  
+this can also be used to:
+- refer current class instance variable.
+- invoke current class method (implicitly)
+- this() can be used to invoke current class constructor.
+- this can be passed as an argument in the method call.
+- this can be passed as argument in the constructor call.
+- this can be used to return the current class instance from the method.
+
+
+How to use 'this' with methods...
+
+instead of calling methods by creating an instance like this:
+
+public static void main(String[] args){
+  Dog myDog = new Dog("Odie");
+  myDog.speak();
+}
+
+
+we can call methods this way:
+
+public class Computer{
+  public int brightness;
+  public int volume;
+ 
+  public void setBrightness(int inputBrightness){
+    this.brightness = inputBrightness;
+  }
+ 
+  public void setVolume(int inputVolume){
+    this.volume = inputvolume;
+  }
+ 
+  public void resetSettings(){
+    this.setBrightness(0);
+    this.setVolume(0);
+  }
+}
+
+The resetSettings() method calls other methods from the class. But it needs an object to call those methods! Rather than create a new object (like we did with the Dog named myDog earlier), we use this as the object. What this means is that the object that calls resetSettings() will be used to call setBrightness(0) and setVolume(0).
+
+public static void main(String[] args){
+  Computer myComputer = new Computer();
+  myComputer.resetSettings();
+}
+In this example, calling myComputer.resetSettings() is as if we called myComputer.setBrightness(0) and myComputer.setVolume(0). this serves as a placeholder for whatever object was used to call the original method.
+
+Finally, this can be used as a value for a parameter. Let’s say a method exists that takes a Computer as a parameter (that method’s signature might be something like public void pairWithOtherComputer(Computer other). If you’re writing another method of the Computer, and want to call the pairWithOtherComputer() method, you could use this as the parameter. That call might look something like this.pairWithOtherComputer(this). You’re using the current object to call the method and are passing that object as that method’s parameter.
+
+public void pairWithOtherComputer(Computer other){
+  // Code for method that uses the parameter other
+}
+ 
+public void setUpConnection(){
+  // We use "this" to call the method and also pass "this" to the method so it can be used in that method
+  this.pairWithOtherComputer(this);
+}

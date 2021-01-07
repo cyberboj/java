@@ -1,0 +1,47 @@
+
+Row Major Traversal:
+
+- this refers to a traversal path that moves horizontally through each row starting at the first row and ending with the last. this path is created by the way we set our nested loops.
+- to control the indices, we have to use standard for loops
+
+String[][] matrix = {
+{"[0][0]", "[0][1]", "[0][2]"}, 
+{"[1][0]", "[1][1]", "[1][2]"},
+{"[2][0]", "[2][1]", "[2][2]"},
+{"[3][0]", "[3][1]", "[3][2]"}
+};
+  
+  
+int stepCount = 0;
+ 
+for(int a = 0; a < matrix.length; a++) {
+
+  for(int b = 0; b < matrix[a].length; b++) {
+  
+   System.out.print("Step: " + stepCount);
+   System.out.print(", Element: " + matrix[a][b]);
+   System.out.println();
+             //or just write the three steps in a single line,          System.out.println("Step: " + stepCount + ", Element: " + matrix[a][b]);
+   stepCount++;  //keep counting
+   
+   }//inner loop
+   
+}//outer loop
+
+/* result:
+Step: 0, Element: [0][0]
+Step: 1, Element: [0][1]
+Step: 2, Element: [0][2]
+Step: 3, Element: [1][0]
+Step: 4, Element: [1][1]
+Step: 5, Element: [1][2]
+Step: 6, Element: [2][0]
+Step: 7, Element: [2][1]
+Step: 8, Element: [2][2]
+Step: 9, Element: [3][0]
+Step: 10, Element: [3][1]
+Step: 11, Element: [3][2]
+*/
+
+- the step value increases with every iteration within the inner 'for' loop because we accessed each element. if we follow the step values in the output, we see that it followed a row major order i.e. finish from one row before going to the other. this is because we use the number of rows as the outer condition with "a < matrix.length". we later used the number of columns, "matrix[a].length" as the termination for the inner loop. we basically said "for every row in our matrix, iterate through every single column before moving to the next. that's why this is a Row Major Order.
+- due to how things are structured in Java, enhanced for loops are always in row-major order because enhanced for loops iterate through elements in the outer array which cause the terminating condition to be the length of the 2D array which is...the number of rows.
