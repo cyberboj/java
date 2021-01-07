@@ -1,7 +1,6 @@
 
 //this program finds the priciest item in a list
 
-
 import java.util.*;
 
 public class Practice {
@@ -32,4 +31,3 @@ public class Practice {
 }//end of class
 
 
-     //   System.out.println();
